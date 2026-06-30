@@ -60,7 +60,7 @@ Follow these steps to set up the project locally for development or testing.
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/fajarghifar/inventory-management-system.git
+    git clone <repository-url>
     ```
 
 2. **Navigate to the project folder:**
@@ -129,7 +129,3 @@ Have ideas to improve the system? Architecture enhancements, UI tweaks, or bug r
 ## 📄 License
 
 Licensed under the [MIT License](LICENSE).
-
----
-
-> Crafted by [Fajar Ghifar](https://github.com/fajarghifar) &nbsp;&middot;&nbsp; [YouTube](https://www.youtube.com/@fajarghifar) &nbsp;&middot;&nbsp; [Instagram](https://instagram.com/fajarghifar) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/fajarghifar/)
