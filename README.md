@@ -125,7 +125,3 @@ Follow these steps to set up the project locally for development or testing.
 Have ideas to improve the system? Architecture enhancements, UI tweaks, or bug reports are welcome!
 - Submit a **Pull Request (PR)**
 - Create an **Issue** for feature requests or structural bugs
-
-## 📄 License
-
-Licensed under the [MIT License](LICENSE).
