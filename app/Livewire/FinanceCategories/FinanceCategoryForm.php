@@ -10,6 +10,7 @@ use Illuminate\Validation\Rule;
 use App\DTOs\FinanceCategoryData;
 use App\Enums\FinanceCategoryType;
 use App\Services\FinanceCategoryService;
+use Illuminate\Support\Facades\Log;
 use App\Exceptions\FinanceCategoryException;
 
 class FinanceCategoryForm extends Component
@@ -92,6 +93,7 @@ class FinanceCategoryForm extends Component
         } catch (FinanceCategoryException $e) {
             $this->dispatch('toast', message: $e->getMessage(), type: 'error');
         } catch (\Throwable $e) {
+            Log::error($e);
             $this->dispatch('toast', message: 'An unexpected error occurred.', type: 'error');
         }
     }

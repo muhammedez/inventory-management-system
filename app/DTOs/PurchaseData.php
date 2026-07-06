@@ -5,7 +5,7 @@ namespace App\DTOs;
 use App\Enums\PurchaseStatus;
 use Illuminate\Support\Carbon;
 
-class PurchaseData
+readonly class PurchaseData
 {
     public function __construct(
         public int $supplier_id,

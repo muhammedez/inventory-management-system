@@ -34,7 +34,7 @@ class FinanceTransactionService
                 'amount' => $sale->total,
                 'description' => 'Sale Inv: ' . $sale->invoice_number . ' - ' . ($sale->customer->name ?? 'Guest'),
                 'external_reference' => $sale->invoice_number,
-                'created_by' => $sale->created_by ?? Auth::id() ?? 1,
+                'created_by' => $sale->created_by ?? Auth::id(),
             ]
         );
     }
@@ -58,7 +58,7 @@ class FinanceTransactionService
                 'amount' => $purchase->total,
                 'description' => 'Purchase Inv: ' . $purchase->invoice_number . ' - ' . ($purchase->supplier->name ?? 'Unknown'),
                 'external_reference' => $purchase->invoice_number,
-                'created_by' => $purchase->created_by ?? Auth::id() ?? 1,
+                'created_by' => $purchase->created_by ?? Auth::id(),
             ]
         );
     }

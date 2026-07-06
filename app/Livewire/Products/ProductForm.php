@@ -10,6 +10,7 @@ use App\Models\Unit;
 use Livewire\Attributes\On;
 use Illuminate\Validation\Rule;
 use App\Services\ProductService;
+use Illuminate\Support\Facades\Log;
 use App\Exceptions\ProductException;
 
 class ProductForm extends Component
@@ -121,6 +122,7 @@ class ProductForm extends Component
         } catch (ProductException $e) {
             $this->dispatch('toast', message: $e->getMessage(), type: 'error');
         } catch (\Throwable $e) {
+            Log::error($e);
             $this->dispatch('toast', message: 'An unexpected error occurred.', type: 'error');
         }
     }

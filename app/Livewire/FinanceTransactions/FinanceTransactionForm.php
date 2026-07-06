@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 use App\Models\FinanceCategory;
 use App\Models\FinanceTransaction;
 use App\DTOs\FinanceTransactionData;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use App\Services\FinanceTransactionService;
 use App\Exceptions\FinanceTransactionException;
@@ -106,7 +107,7 @@ class FinanceTransactionForm extends Component
             amount: (int) $this->amount,
             description: $this->description,
             external_reference: $this->external_reference,
-            created_by: Auth::id() ?? 1, // Fallback for safety, though Auth check should be middleware
+            created_by: Auth::id(),
         );
 
         try {
@@ -124,8 +125,8 @@ class FinanceTransactionForm extends Component
         } catch (FinanceTransactionException $e) {
             $this->dispatch('toast', message: $e->getMessage(), type: 'error');
         } catch (\Throwable $e) {
-            \Illuminate\Support\Facades\Log::error($e);
-            $this->dispatch('toast', message: 'Error: ' . $e->getMessage(), type: 'error');
+            Log::error($e);
+            $this->dispatch('toast', message: 'An unexpected error occurred.', type: 'error');
         }
     }
 

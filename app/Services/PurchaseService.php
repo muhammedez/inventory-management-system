@@ -167,7 +167,7 @@ class PurchaseService
                         $timestamp = now()->format('Y-m-d H:i');
                         $ref = $purchase->invoice_number ? "Invoice #{$purchase->invoice_number}" : "Purchase #{$purchase->id}";
                         $logHeader = "\n\n[System Log - {$timestamp}] Price update via {$ref}:";
-                        $updateData['notes'] = TRIM(($product->notes ?? '') . $logHeader . $priceChangeLog);
+                        $updateData['notes'] = trim(($product->notes ?? '') . $logHeader . $priceChangeLog);
                     }
 
                     $product->update($updateData);

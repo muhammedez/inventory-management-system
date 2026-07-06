@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Illuminate\Validation\Rule;
 use App\Services\CategoryService;
+use Illuminate\Support\Facades\Log;
 use App\Exceptions\CategoryException;
 
 class CategoryForm extends Component
@@ -79,6 +80,7 @@ class CategoryForm extends Component
         } catch (CategoryException $e) {
             $this->dispatch('toast', message: $e->getMessage(), type: 'error');
         } catch (\Throwable $e) {
+            Log::error($e);
             $this->dispatch('toast', message: 'An unexpected error occurred.', type: 'error');
         }
     }

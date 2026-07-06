@@ -8,6 +8,7 @@ use App\DTOs\UnitData;
 use Livewire\Attributes\On;
 use Illuminate\Validation\Rule;
 use App\Services\UnitService;
+use Illuminate\Support\Facades\Log;
 use App\Exceptions\UnitException;
 
 class UnitForm extends Component
@@ -74,6 +75,7 @@ class UnitForm extends Component
         } catch (UnitException $e) {
             $this->dispatch('toast', message: $e->getMessage(), type: 'error');
         } catch (\Throwable $e) {
+            Log::error($e);
             $this->dispatch('toast', message: 'An unexpected error occurred.', type: 'error');
         }
     }
