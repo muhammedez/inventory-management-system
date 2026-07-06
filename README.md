@@ -1,42 +1,42 @@
-# ✨ Comprehensive Inventory Management System
+#  Comprehensive Inventory Management System
 
 A robust, enterprise-grade **Inventory Management System** built with **Laravel 12** and **Livewire**. Designed specifically to streamline inventory tracking, sales, purchasing processes, and financial ledger management with dynamic localization.
 
 ![Dashboard Preview](public/images/screenshot.png)
 
-## 🌟 Key Modules & Features
+##  Key Modules & Features
 
-- **📊 Advanced Analytics Dashboard**
+- ** Advanced Analytics Dashboard**
   - Real-time Total Sales & Net Cash Flow tracking.
   - Interactive ApexCharts for Sales & Cash Flow trends.
   - Quick insights: Top Selling Products, Top Customers, and Low Stock Alerts.
 
-- **💳 Sales & POS (Point of Sale)**
+- ** Sales & POS (Point of Sale)**
   - Fast, intuitive POS interface designed for rapid checkouts.
   - Support for Global Discounts, Exact Cash computation, and Change tracking.
   - Direct integration with Invoice/Receipt printing.
   - Persistent cart state across sessions.
 
-- **📦 Purchases & Receiving**
+- ** Purchases & Receiving**
   - End-to-end Purchase Order workflow.
   - Seamless "Receive Items" action that updates real inventory balances automatically.
   - Supplier tracking and history filtering.
 
-- **🗃️ Master Data Management**
+- ** Master Data Management**
   - **Products**: Manage stock, pricing (Buy/Sell margins), and associations.
   - **Categories & Units**: Structured tagging for efficient reporting.
   - **Customers & Suppliers**: Comprehensive contact books integrated globally.
 
-- **💰 Finance Ledger & Cash Flow**
+- ** Finance Ledger & Cash Flow**
   - Integrated Double-entry style tracking for all Income and Expenses.
   - Dynamic Cash Flow reporting mapping POS sales to Income and Purchases to Expenses automatically.
   - Custom Income/Expense categorization.
 
-- **⚙️ Dynamic Localization & Settings**
+- ** Dynamic Localization & Settings**
   - Global Store Information management.
   - **Fully Dynamic Currency Framework**: Customizable currency symbols, positions (left/right), thousands separators, decimal separators, and fractional precision. Changes apply globally to charts, tables, inputs, and receipts instantly.
 
-## 🛠️ Tech Stack & Library Used
+##  Tech Stack & Library Used
 
 - **Framework**: Laravel 12.x
 - **Frontend/Reactivity**: Laravel Livewire 3 + Alpine.js
@@ -46,7 +46,7 @@ A robust, enterprise-grade **Inventory Management System** built with **Laravel 
 - **Icons**: Blade Heroicons
 - **Database**: MySQL
 
-## 🚀 Quick Start
+##  Quick Start
 
 Follow these steps to set up the project locally for development or testing.
 
@@ -120,7 +120,7 @@ Follow these steps to set up the project locally for development or testing.
     - **Username:** `admin`
     - **Password:** `password`
 
-## 💡 Contributing
+##  Contributing
 
 Have ideas to improve the system? Architecture enhancements, UI tweaks, or bug reports are welcome!
 - Submit a **Pull Request (PR)**
